@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>targetpratice</title>
+	<link rel="stylesheet" href="target.css" />
+</head>
+<body>
+	<audio src="sounds/Big Top - Sir Cubworth.mp3" id="bigtop" loop="loop" autoplay="autoplay" ></audio>
+	<div id="targetgame">
+		<div class="target" id="target0" onclick="squrt(this)" ></div>
+		<div class="target" id="target1" onclick="squrt(this)" ></div>
+		<div class="target" id="target2" onclick="squrt(this)" ></div>
+		<div class="target" id="target3" onclick="squrt(this)" ></div>
+		<div class="target" id="target4" onclick="squrt(this)" ></div>
+		<div class="mirror" id="mirror0" onclick="splash(this)" > </div>
+		<div class="mirror" id="mirror1" onclick="splash(this)" ></div>
+		<div class="mirror" id="mirror2" onclick="splash(this)" ></div>
+		<div class="mirror" id="mirror3" onclick="splash(this)" ></div>
+		<div class="mirror" id="mirror4" onclick="splash(this)" ></div>
+		<div class="catus" id="catus1" onclick="bounes(this)" ></div>
+		<div class="start" id="background"> </div>
+		<div id="foreground"> </div>
+		<div class="topstart" id="topcurten"> </div>
+		<div class="leftstart" id="leftcurten"> </div>
+		<div class="rightstart" id ="rightcurten"> </div>
+		<div id="startboard" > </div>
+		<div id="endboard"> </div>
+		<div class="prestart" id="startbutton" onclick="start(this); randomtargetup(); randomcatusup(); randommirrorup(); gametimer();" > </div>
+		<div id="infoboard" > </div>
+		<div id="score"> 12 </div>
+		<div id="timer"> 60 </div>
+	</div>
+	<p style="text-align:center"> "Water Swirl, Small, 15.wav" and "Splash, Jumping, E.wav" by InspectorJ (www.jshaw.co.uk) of Freesound.org </p>
+	<p style="text-align:center"> "woohoo" sound from https://freesound.org/s/341488/ </p>
+	<p style="text-align:center"> background music "Big Top - Cubeworth" from youtube libary </p>
+<script src="script.js"></script>
+</body>
+</html>

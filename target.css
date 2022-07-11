@@ -1,0 +1,309 @@
+
+#targetgame{
+	margin: auto;
+	width: 1000px;
+	height: 600px;
+	border: 1px solid black;
+	#background-color: black;
+	position: relative;
+	overflow: hidden;
+}
+
+#leftcurten {
+	z-index: 50;
+	pointer-events: none;
+	position:absolute;
+	width: 1000px;
+	height: 600px;
+	background: url(sprite/leftpcurten.png) 0 0;
+}
+
+.leftstart{
+	animation: leftcurten 5s linear both;
+}
+
+.leftend{
+	animation: leftcurtenEND 5s linear both;
+}
+
+@keyframes leftcurten{
+	0%{left: 0px;}
+	100%{left:-420px;}
+}
+
+@keyframes leftcurtenEND{
+	0%{left:-420px;}
+	100%{left: 0px;}
+}
+
+#rightcurten {
+	z-index: 60;
+	pointer-events: none;
+	position:absolute;
+	width: 1000px;
+	height: 600px;
+	background: url(sprite/rightcurten.png) 0 0;
+}
+
+.rightstart{
+	animation: rightcurten 5s linear both;
+}
+
+.rightend{
+	animation: rightcurtenEND 5s linear both;
+}
+
+@keyframes rightcurten {
+	0%{left:0px;}
+	100%{left: 420px;}
+}
+
+@keyframes rightcurtenEND {
+	0%{left: 420px;}
+	100%{left:0px;}
+}
+
+#topcurten {
+	position:absolute;
+	pointer-events: none;
+	z-index: 70;
+	width: 1000px;
+	height: 600px;
+	background: url(sprite/topcurten.png) 0 0;
+	transition: all .5s
+}
+
+.topstart{
+	animation: topcurten 5s linear both;
+}
+
+.topend{
+	animation: topcurtenEND 5s linear both;
+}
+
+@keyframes topcurten{
+	0%{top:0px;}
+	100%{top:-150px;}
+}
+
+@keyframes topcurtenEND{
+	0%{top:-150px;}
+	100%{top:0px;}
+}
+
+#background {
+	position:absolute;
+	width: 1000px;
+	height: 600px;
+	background: url(sprite/background.png) 0 0;
+}
+
+.start {
+	z-index: 10;
+	pointer-events: none;
+}
+
+.end {
+	z-index: 30;
+	pointer-events: auto;
+}
+
+#foreground {
+	position:absolute;
+	z-index: 40;
+	width: 1000px;
+	height: 194px;
+	bottom: 0;
+	background: url(sprite/foreground.png) 0 0;
+}
+
+#startboard {
+	z-index: 100;
+	position:absolute;
+	width: 1000px;
+	height: 600px;
+	background: url(sprite/startboard.png) 0 0;
+}
+
+.starting{
+	animation: movestartboard 2s linear both;
+}
+
+@keyframes movestartboard{
+	0%{top:0px;}
+	100%{top:-1000px;}
+}
+
+#startbutton {
+	z-index: 110;
+	pointer-events: auto;
+	position: absolute;
+	background-color: transparent;
+	width: 222px;
+	height: 99px;
+}
+
+.prestart {
+	top:249px;
+	left:519px;
+}
+
+.poststart{
+	top:1000px;
+	left: 1000px;
+}
+
+.target{
+	z-index: 20;
+	width: 150px;
+	height: 400px;
+	position: absolute;
+	background:url(sprite/target.png) 0 0;
+	bottom: -400px;
+	transition: all .5s;
+}
+
+.mirror{
+	z-index: 20;
+	width: 150px;
+	height: 400px;
+	position: absolute;
+	background:url(sprite/mirror.png) 0 0;
+	bottom: -400px;
+	transition: all .5s;
+}
+
+.up{
+	bottom:0px;
+}
+
+.wet {
+	height: 50px;
+	background:url(sprite/hinge.png)0 0;
+}
+
+.catus{
+	z-index: 20;
+	width: 50px;
+	height: 250px;
+	position: absolute;
+	background:url(sprite/catus.png) 0 0;
+	bottom: -400px;
+	transition: all .3s;
+}
+
+.catusup{
+	bottom:55px;
+}
+
+.catuswet{
+	height: 50px
+}
+
+
+#infoboard {
+	width: 1000px;
+	height: 181px;
+	z-index: 80;
+	position: absolute;
+	background: url(sprite/infoboard.png)  0 0;
+	top: -181px;
+}
+
+.infostart {
+	animation: showinfo 2.5s linear both;
+}
+
+@keyframes showinfo {
+	0%{top:-181px;}
+	100%{top:0px;}
+}
+
+.infoend {
+	animation: hideinfo 2.5s linear both;
+}
+
+@keyframes hideinfo {
+	0%{top:0px;}
+	100%{top:-181px;}
+}
+
+#endboard {
+	z-index: 100;
+	position:absolute;
+	width: 1000px;
+	height: 600px;
+	background: url(sprite/endboard.png) 0 0;
+	top: -1000px;
+}
+
+.showend{
+	animation: endingboard 5s linear both;
+}
+
+@keyframes endingboard {
+	0%{top: -1000px;}
+	100%{top: 0px;}
+}
+
+#score {
+	position: absolute;
+	font-size: 50px;
+	top: -94px;
+}
+
+.scorestart{
+	z-index: 90;
+	left:168px;
+	animation: scoreboard 2.5s linear both;
+}
+
+.scoreendding{
+	z-index:100;
+	left:433px;
+	font-size:100px;
+	animation: scoreendding 5.6s linear both;
+}
+
+@keyframes scoreendding {
+	0%{top: -94px;}
+	100%{top: 214px;}
+}
+
+@keyframes scoreboard {
+	0%{top: -94px;}
+	100%{top: 94px;}
+}
+
+#timer {
+	position: absolute;
+	font-size: 50px;
+	left: 807px;
+	top: 94px;
+}
+
+.timerstarting {
+	z-index: 90;
+	animation: timerstarting 2.5s linear both;
+}
+
+.timerendding {
+	z-index: 10;
+}
+
+@keyframes timerstarting {
+	0%{top: -94px;}
+	100%{top: 94px;}
+}
+
+#target0{left: 105px;}
+#target1{left: 265px;}
+#target2{left: 425px;}
+#target3{left: 585px;}
+#target4{left: 745px;}
+#catus1{left: 476px;}
+#mirror0{left: 105px;}
+#mirror1{left: 265px;}
+#mirror2{left: 425px;}
+#mirror3{left: 585px;}
+#mirror4{left: 745px;}
