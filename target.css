@@ -246,10 +246,9 @@
 	100%{top: 0px;}
 }
 
-#score {
+.score {
 	position: absolute;
 	font-size: 50px;
-	top: -94px;
 }
 
 .scorestart{
@@ -258,15 +257,26 @@
 	animation: scoreboard 2.5s linear both;
 }
 
+.scorestart1{
+	z-index: 90;
+	left:168px;
+	animation: scoreboard1 2.5s linear both;
+}
+
 .scoreendding{
 	z-index:100;
-	left:433px;
+	left:463px;
 	font-size:100px;
-	animation: scoreendding 5.6s linear both;
+	animation: scoreendding 5s linear both;
+}
+
+@keyframes scoreboard1 {
+	0%{top: 94px;}
+	100%{top: -94px;}
 }
 
 @keyframes scoreendding {
-	0%{top: -94px;}
+	0%{top: -800px;}
 	100%{top: 214px;}
 }
 
@@ -288,12 +298,59 @@
 }
 
 .timerendding {
-	z-index: 10;
+	z-index: 90;
+	animation: timeending 2.5s linear both;
 }
 
 @keyframes timerstarting {
 	0%{top: -94px;}
 	100%{top: 94px;}
+}
+
+@keyframes timeending {
+	0%{top: 94px;}
+	100%{top: -94px;}
+}
+
+#volMAX {
+	width: 49px;
+	height: 37px;
+	z-index:220 ;
+	position: absolute;
+	background-color: transparent;
+	left: 396px;
+	top: 6.5px;
+}
+
+#volMID {
+	width: 49px;
+	height: 37px;
+	z-index:220 ;
+	position: absolute;
+	background-color: transparent;
+	left: 485px;
+	top: 6.5px;
+}
+
+#volMUTE {
+	width: 49px;
+	height: 37px;
+	z-index:220 ;
+	position: absolute;
+	background-color: transparent;
+	left: 570px;
+	top: 6.5px;
+}
+
+#volICON {
+	width: 217px;
+	height: 37px;
+	z-index: 220;
+	position: absolute;
+	background: url(sprite/vol.png) 0 0;
+	left: 396px;
+	top: 10px;
+	pointer-events: none;
 }
 
 #target0{left: 105px;}
@@ -307,3 +364,5 @@
 #mirror2{left: 425px;}
 #mirror3{left: 585px;}
 #mirror4{left: 745px;}
+#score{top: -94px;}
+#score1{top: -94px;}

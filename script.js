@@ -1,5 +1,6 @@
 var counter = 0
 var timerr = 60
+var bigtop = document.getElementById("bigtop");
 
 function squrt(target) {
 	
@@ -134,7 +135,10 @@ function gametimer() {
 		timer.classList.remove("timerstarting");
 		timer.classList.add("timerendding");
 		score.classList.remove("scorestart");
-		score.classList.add("scoreendding");
+		score1.classList.add("scoreendding");
+		score.classList.add("scorestart1");
+		const element = document.getElementById("score1"); //JS is very stupid
+		element.innerHTML = counter;
 	};
 }
 
@@ -143,7 +147,19 @@ function start(prestart){
 	startbutton.classList.add("poststart");
 	startboard.classList.add("starting");
 	infoboard.classList.add("infostart");
-	document.getElementById("bigtop").play(); //come back to this later if it plays to loud
+	bigtop.play();
 	score.classList.add("scorestart");
 	timer.classList.add("timerstarting");
+}
+
+function volMAX(volMAX){
+	bigtop.volume=1;
+}
+
+function volMID(volMID) {
+	bigtop.volume = 0.5;
+}
+
+function volMUTE(volMUTE) {
+	bigtop.volume= 0.0;
 }
