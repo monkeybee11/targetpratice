@@ -148,6 +148,7 @@ function start(prestart){
 	startboard.classList.add("starting");
 	infoboard.classList.add("infostart");
 	bigtop.play();
+	bigtop.bolume= 0.5;
 	score.classList.add("scorestart");
 	timer.classList.add("timerstarting");
 }
